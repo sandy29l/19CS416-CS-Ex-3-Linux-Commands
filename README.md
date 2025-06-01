@@ -1,340 +1,222 @@
-# 19CS416-CS-Ex-3-Linux-Commands
+# Ex.3(A-C) Virtualization: Installation and Configuration of Oracle VirtualBox & Kali Linux, and Execution of Linux Commands
+### NAME: SANTHOSH L
+### REG NO:212222100046
 
-**Linux** is an open-source operating system, and its kernel is the heart of the OS, facilitating communication between hardware and software. One of the key advantages of Linux is its customizability; developers can modify the Linux kernel to create their own tailored operating systems.
+## Aim:
+To set up a virtualized environment using Oracle VirtualBox, install Kali Linux as a guest OS, and execute fundamental Linux commands.
 
-## Linux Commands
+## 3.a) Installation and Configuration of Oracle VirtualBox
 
-Linux commands are executed in the terminal, which is case-sensitive. This guide covers some basic and advanced commands used in Linux.
+## Aim:
+To install and configure Oracle VM VirtualBox.
 
-### 1. `ls` Command
+## Pre-requisites:
 
-The `ls` command is used to display a list of contents in a directory.
+* Machine with Internet access
+* Minimum 4 GB RAM
+* Sufficient storage space
 
-**Syntax:** 
-```bash
+## Steps:
+1. Download Oracle VM VirtualBox:
+
+    * Visit Oracle VirtualBox Official Site
+    * Download installer for your OS (Windows/macOS/Linux).
+2. Install Oracle VM VirtualBox (Example: Windows):
+
+    * Launch Installer → Allow Changes → Click Next.
+    * Choose Installation Options → Click Next.
+    * Accept Network Interface Warning → Click Yes.
+    * Click Install.
+    * Finish Installation and Launch VirtualBox.
+3. Configure VirtualBox:
+
+    * Open VirtualBox.
+    * Click New → Name VM → Select Type (Linux/Windows) and Version.
+    * Allocate:
+        * Minimum 2 GB RAM
+        * Create Virtual Hard Disk (20 GB recommended).
+    * Start Virtual Machine and provide ISO to install OS.
+
+## Result:
+Thus, Oracle VM VirtualBox was installed successfully.
+
+## 3.b) Installation and Configuration of Kali Linux
+
+## Aim:
+To install and configure Kali Linux in Oracle VirtualBox.
+
+## Pre-requisites:
+* Oracle VM VirtualBox Installed
+* 4 GB RAM and 20 GB Storage Minimum
+* Kali Linux ISO image
+
+## Steps:
+1. Download Kali Linux ISO:
+
+    * Visit Kali Linux Official Site
+    * Download 64-bit ISO (Installer version).
+2. Create a New Virtual Machine:
+
+    * Open VirtualBox → Click New.
+    * Name: "Kali Linux" → Type: Linux → Version: Debian (64-bit).
+3. Allocate Memory:
+
+    * Minimum 2 GB RAM (recommended 4 GB).
+4. Create Virtual Hard Disk:
+
+    * Select VDI (VirtualBox Disk Image).
+    * Choose Dynamically allocated.
+    * Set Disk size to 20 GB or more.
+5. Configure ISO Image:
+
+    * Settings → Storage → Controller: IDE → Empty CD → Choose Disk File → Select Kali Linux ISO.
+6. Start Installation:
+
+    * Boot Virtual Machine → Choose Graphical Install.
+    * Set Language, Region, Keyboard.
+    * Configure Network → Set Hostname (e.g., kali).
+    * Set root password.
+    * Disk Partitioning: Use entire disk → All files in one partition.
+    * Install System → Install GRUB Bootloader → Finish Installation.
+7. Login to Kali Linux:
+
+    * Use root credentials.
+8. (Optional) Install Guest Additions:
+
+    * Devices → Insert Guest Additions CD Image → Follow steps inside Kali.
+
+## Snapshots:
+AWS Account Creation Snapshot
+
+Snapshot 1: Installing Oracle VirtualBox
+![image](https://github.com/user-attachments/assets/737dafde-fd5d-4266-849a-a12013ce9c5b)
+
+Snapshot 2: Kali Running in Virtual
+![image](https://github.com/user-attachments/assets/6b08c65e-e2c0-4f8e-a782-0914a3470759)
+
+## Result:
+Thus, Kali Linux guest OS was installed and configured successfully.
+
+## 3.c) Execution of Linux Commands in Kali
+
+## About Linux:
+* Open-source operating system.
+* Kernel manages communication between hardware and software.
+* Commands are case-sensitive.
+
+## Linux Commands:
+1. ls Command
+    
+    The ls command is used to display a list of content of a directory.
+
+### Syntax:
+```
 ls
 ```
+![image](https://github.com/user-attachments/assets/65cbb685-53e1-4d50-b109-2d3a73e366dc)
 
-**Output:**
+2. pwd Command
 
-### 2. `pwd` Command
+    The pwd command is used to display the location of the current working directory.
 
-The `pwd` command displays the location of the current working directory.
-
-**Syntax:**
-```bash
+### Syntax: 
+```
 pwd
 ```
+![image](https://github.com/user-attachments/assets/06a87e8c-9f1f-4f33-9c75-d9a5f75c8d60)
 
-**Output:**
 
-### 3. `mkdir` Command
+3. mkdir Command
 
-The `mkdir` command is used to create a new directory.
+    The mkdir command is used to create a new directory under any directory.
 
-**Syntax:**
-```bash
+### Syntax: 
+```
 mkdir <directory_name>
 ```
+![image](https://github.com/user-attachments/assets/1b1790eb-a58c-4bbb-a2b7-ee9ab6051a93)
 
-**Output:**
 
-### 4. `rmdir` Command
+4. rmdir Command
 
-The `rmdir` command is used to delete a directory.
+    The rmdir command is used to delete a directory.
 
-**Syntax:**
-```bash
+### Syntax: 
+```
 rmdir <directory_name>
 ```
+![image](https://github.com/user-attachments/assets/5002fe8b-4414-42d0-8519-3d1f452fbafb)
 
-**Output:**
 
-### 5. `cd` Command
+5. cd Command
+The cd command is used to change the current directory
 
-The `cd` command is used to change the current directory.
-
-**Syntax:**
-```bash
+### Syntax: 
+```
 cd <directory_name>
 ```
+![image](https://github.com/user-attachments/assets/84cead37-3512-4e54-8884-427cb99b15fc)
 
-**Output:**
 
-### 6. `cat` Command
+6. cat Command
 
-The `cat` command is used to create, display, and concatenate files.
+    The cat command is a multi-purpose utility in the Linux system. It can be used to create a file, display content ofthe file, copy the content of one file to another file, and more.
 
-**Syntax:**
-```bash
-cat [OPTION]... [FILE]...
+### Syntax: 
 ```
-
-**Output:**
-
-### 7. `cp` Command
-
-The `cp` command is used to copy files or directories.
-
-**Syntax:**
-```bash
-cp <source_file> <destination_file>
+cat [options] [file_name]
 ```
+![image](https://github.com/user-attachments/assets/2361932b-99fc-4118-9097-bd9bdce384f0)
 
-**Output:**
+![image](https://github.com/user-attachments/assets/4c6d451f-4bfc-48f1-b4cd-0217fef9e06c)
 
-### 8. `gedit` Command
+7. cp Command
 
-`gedit` is a general-purpose text editor used to create and edit text files.
-
-**Syntax:**
-```bash
-gedit <file_name>
+    The cp command is used to copy a file or directory.
+### Syntax: 
 ```
-
-**Output:**
-
-### 9. `su` Command
-
-The `su` command provides administrative access to another user.
-
-**Syntax:**
-```bash
-su <username>
+cp [source] [destination]
 ```
+![image](https://github.com/user-attachments/assets/4e377a91-23d4-4169-a66b-f88af203a60b)
 
-**Output:**
 
-### 10. `mv` Command
+![image](https://github.com/user-attachments/assets/1edbd41c-31c2-4a94-8e7f-be35155e35e5)
 
-The `mv` command is used to move a file or directory from one location to another.
 
-**Syntax:**
-```bash
-mv <file_name> <directory_path>
+8. mv Command
+
+    The mv command is used to move a file or a directory form one location to another location.
+
+### Syntax: 
 ```
-
-**Output:**
-
-### 11. `rename` Command
-
-The `rename` command is used to rename files.
-
-**Syntax:**
-```bash
-rename 's/old-name/new-name/' <files>
+mv [source] [destination]
 ```
+![image](https://github.com/user-attachments/assets/fd4832ba-1dad-45a7-a213-a5f28ca508db)
 
-**Output:**
 
-### 12. `head` Command
+![image](https://github.com/user-attachments/assets/16138df9-da4a-4070-a936-29f251178773)
 
-The `head` command displays the first 10 lines of a file.
 
-**Syntax:**
-```bash
-head <file_name>
+9. touch Command
+
+    Create empty file.
+
+### Syntax: 
 ```
-
-**Output:**
-
-### 13. `tail` Command
-
-The `tail` command displays the last 10 lines of a file.
-
-**Syntax:**
-```bash
-tail <file_name>
+touch [filename]
 ```
+![image](https://github.com/user-attachments/assets/0ee05807-fe42-4579-a1bf-6562904fd7b1)
 
-**Output:**
 
-### 14. `id` Command
+10. vi Command
 
-The `id` command displays the user ID (UID) and group ID (GID).
+    Edit file contents using editor.
 
-**Syntax:**
-```bash
-id
+### Syntax: 
 ```
-
-**Output:**
-
-### 15. `grep` Command
-
-The `grep` command is used to search for a pattern within files.
-
-**Syntax:**
-```bash
-command | grep <search_word>
+vi [filename]
 ```
+![image](https://github.com/user-attachments/assets/77ca13f3-45d7-4da6-88af-cdd2e280f41b)
 
-**Output:**
-
-### 16. `tr` Command
-
-The `tr` command is used to translate or delete characters.
-
-**Syntax:**
-```bash
-command | tr <old> <new>
-```
-
-**Output:**
-
-### 17. `chmod` Command
-
-The `chmod` command is used to change the access mode (permissions) of a file.
-
-**Syntax:**
-```bash
-chmod <options> <permissions> <file_name>
-```
-
-**Output:**
-
-### 18. `tar` Command
-
-The `tar` command is used to create or extract archive files.
-
-**Syntax:**
-```bash
-tar [options] [archive-file] [files_to_archive]
-```
-
-**Output:**
-
-### 19. `chown` Command
-
-The `chown` command is used to change the ownership of a file.
-
-**Syntax:**
-```bash
-chown <owner_name> <file_name>
-```
-
-**Output:**
-
-### 20. `make` Command
-
-The `make` command is used to build and maintain groups of programs.
-
-**Syntax:**
-```bash
-make [-f makefile] [options] [targets]
-```
-
-**Output:**
-
-### 21. `ifconfig` Command
-
-The `ifconfig` command is used to configure network interfaces.
-
-**Syntax:**
-```bash
-ifconfig [options] [interface]
-```
-
-**Output:**
-
-### 22. `chmod 777` Command
-
-The `chmod 777` command gives read, write, and execute permissions to the owner, group, and others.
-
-**Syntax:**
-```bash
-chmod 777 <file_name>
-chmod -R 777 /path/to/file/or/folder
-```
-
-**Output:**
-
-### 23. `host` Command
-
-The `host` command is used to display the IP address for a given domain name.
-
-**Syntax:**
-```bash
-host <domain_name> or <ip_address>
-```
-
-**Output:**
-
-### 24. `gzip` Command
-
-The `gzip` command is used to compress files, replacing the original file with a compressed one with a `.gz` extension.
-
-**Syntax:**
-```bash
-gzip <file1> <file2> <file3>...
-```
-
-**Output:**
-
-### 25. `sort` Command
-
-The `sort` command is used to sort the contents of a file alphabetically.
-
-**Syntax:**
-```bash
-sort <file_name>
-```
-
-**Output:**
-
-### 26. `cal` Command
-
-The `cal` command displays the current month's calendar with the current date highlighted.
-
-**Syntax:**
-```bash
-cal
-```
-
-**Output:**
-
-### 27. `clear` Command
-
-The `clear` command clears the terminal screen.
-
-**Syntax:**
-```bash
-clear
-```
-
-**Output:**
-
-### 28. `mail` Command
-
-The `mail` command is used to send emails from the command line.
-
-**Syntax:**
-```bash
-mail
-```
-
-**Output:**
-
-### 29. `df` Command
-
-The `df` command displays the disk space usage of file systems.
-
-**Syntax:**
-```bash
-df
-```
-
-**Output:**
-
-### 30. `find` Command
-
-The `find` command is used to search for files in a directory hierarchy.
-
-**Syntax:**
-```bash
-find <directory> -name <file_name>
-```
-
-**Output:**
-
-## Result
+## Result:
+Thus, various Linux commands were executed successfully in Kali Linux virtual machine.
